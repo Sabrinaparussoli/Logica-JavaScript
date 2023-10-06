@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<script>
+
+function br() {
+
+    document.write("<br>");
+    document.write("<br>");
+
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    br();
+}
+
+function imc(a1, p1){
+	return p1 / (a1 * a1);
+}
+
+var nome =  prompt("Informe seu nome: ");
+var altura = prompt(nome + ", Informe sua altura: ");
+var peso = prompt(nome + ", informe seu peso: ");
+
+var totalIMC =  imc (altura, peso);
+
+mostra("A soma dos IMC's é: " + totalIMC);
+
+if(totalIMC < 18.5){
+    mostra(nome + " Você está abaixo do recomendado");
+}
+if(totalIMC > 35){
+    mostra(nome + " Você está acima do recomendado");
+}
+if(totalIMC >=18.5 && totalIMC <=24.9){
+    mostra(nome + " você esta normal!");
+}
+
+if(totalIMC >=25 && totalIMC <=29.9){
+    mostra(nome + " você esta acima do peso!");
+}
+if(totalIMC >=30 && totalIMC <=34.9){
+    mostra(nome + " obesidade grau 1!");
+}
+if(totalIMC >=35 && totalIMC <=39.9){
+    mostra(nome + " obesidade grau 2!");
+}
+if(totalIMC >=40){
+    mostra(nome + " Kilos mortais URGENTE!");
+}
+</script>
